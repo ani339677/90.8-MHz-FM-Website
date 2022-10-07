@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= eventName %> | LIVE</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        audio::-webkit-media-controls-panel{
+            background-color: #F7DE60;
+        }
+        audio{
+            background-color: #F7DE60;
+            width: 25rem;
+            border-radius: 0px 0px 1rem 1rem;
+        }
+        #audio-grid{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5rem;
+        }
+        body{
+            background-color: rgba(10, 19, 26, 0.99);
+        }
+        div.img{
+            width: 25rem;
+            background-color: #F7DE60;
+            border-radius: 1rem 1rem 0rem 0rem;
+        }
+        img{
+            border-radius: 1rem 1rem 1rem 1rem;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0.3rem;
+        }
+        div#live-heading{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        div#live-heading h1{
+            color: white;
+            font-family: Poppins;
+            letter-spacing: 0.2rem;
+            text-align: right;
+        }
+
+        div#ls h1{
+            color: #F7DE60;
+            font-family: Poppins;
+            letter-spacing: 0.2rem;
+            text-align: center;
+            font-size: 3rem;
+        }
+
+        .blinking {
+            animation: 1s blink ease infinite;
+        }
+
+        @keyframes blink {
+        from, to {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        }
+
+        @media (max-width: 540px){
+            #audio-grid{
+                margin-left:2rem;
+                margin-right: 2rem;
+                margin-top: 3rem;
+            }
+            div#ls h1{
+                font-size: 2rem;
+            }
+            #live-heading h1{
+                font-size: 1.5rem;
+            }
+            div.img, audio{
+                width: 20rem;
+            }
+        }
+        @media (max-width: 378px){
+            #audio-grid{
+                margin-left:2rem;
+                margin-right: 2rem;
+                margin-top: 3rem;
+            }
+            div#ls h1{
+                font-size: 1.5rem;
+            }
+            #live-heading h1{
+                font-size: 1rem;
+            }
+            div.img, audio{
+                width: 84vw;
+            }
+        }
+    </style>
+    <script>
+        const socket = io();
+        var peer = new Peer();
+        
+        document.addEventListener("DOMContentLoaded",
+            function (){
+                const audioGrid = document.getElementById('audio-grid');
+                let audio = document.querySelector('audio');
+                
+
+                peer.on('open', id => {
+                    console.log("Peer requested",id);
+                    socket.volatile.emit('join-request', {socketId: socket.id, peerId: id, program: "<%= eventName %>"});
+                });
+                peer.on('close',function(){
+                    //socket.emit('disconnected');
+                });
+                peer.on('disconnected',function(){
+                    //socket.emit('disconnected');
+                })
+
+                peer.on('call', function(call) {
+                    call.answer(); // Answer the call with an A/V stream.
+                    call.on('stream', function(remoteStream) {
+                        console.log("On Call")
+                        audio.srcObject = remoteStream;
+                    });
+                });
+                audio.onloadedmetadata = function () {
+                    audio.play();
+                };
+                
+            });
+        
+    </script>
+</head>
+<body>
+    <div id="audio-grid">
+        <div id="ls"><h1>Live Streaming :</h1></div>
+        <div id="live-heading">
+            <svg height="70" width="35" class="blinking">
+                <circle cx="10" cy="35" r="10" fill="red" />
+                Sorry, your browser does not support inline SVG.  
+            </svg>
+            <h1><%= eventName %></h1>
+        </div>
+        <div class="img"><img src="data/programPics/<%= eventName %>.jpg" alt=""></div>
+        <audio controls></audio>
+    </div>
+</body>
+<script type="text/javascript">
+    window.addEventListener("beforeunload", function(event){
+        event.preventDefault();
+        event.returnValue = '';
+    })
+</script>
+</html>

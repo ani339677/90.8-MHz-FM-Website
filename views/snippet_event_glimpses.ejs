@@ -1,0 +1,62 @@
+<%- include('header'); -%>
+<div id="glimpses">
+    <div id="back-to-events"> <img src="assets/svg/back_to_events.svg" alt="" id="glimpses-back-logo"><div id="glimpses-back-button"> Back to events</div></div>
+    <h2>GLIMPSES OF</h2>
+    <h3> <%= event_name %></h3>
+    <hr>
+    <div id="glimpses-view">
+        <% if (glimpses.length!=0){ %>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel"  data-bs-interval="false">
+            <div class="carousel-indicators">
+                <% for (var i=0; i<glimpses.length ; i++) { %>
+                    <% if (i===0){ %>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= i %>" class="active" aria-current="true" aria-label="Slide <%= i+1 %>"></button>
+                    <% } else{ %>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="<%= i %>" aria-label="Slide <%= i+1 %>"></button>
+                    <% } %>
+                <% } %>
+            </div>
+            <div class="carousel-inner" style="height: 40rem;">
+                <% for (var i=0; i<glimpses.length; i++) { %>
+                    <% if (i===0){ %>
+                        <div class="carousel-item active">
+                            <% if(glimpses[i].ext=='.mp4' || glimpses[i].ext=='.mkv' || glimpses[i].ext=='.avi' ){ %>
+                                <video src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" autoplay controls loop muted></video>
+                            <% } else{ %>
+                                <img src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" alt="">
+                            <% } %>
+                        </div>
+                    <% } else{ %>
+                        <div class="carousel-item">
+                            <% if(glimpses[i].ext=='.mp4' || glimpses[i].ext=='.mkv' || glimpses[i].ext=='.avi' ){ %>
+                                <video src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" autoplay controls loop muted></video>
+                            <% } else{ %>
+                                <img src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" alt="">
+                            <% } %>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <% } else{ %>
+            <table id="glimpse-not-found">
+                <tbody>
+                    <tr>
+                        <td class="align-middle">
+                            No Glimpse Found
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        <% } %>
+    </div>
+</div>
+<%- include('footer'); -%>

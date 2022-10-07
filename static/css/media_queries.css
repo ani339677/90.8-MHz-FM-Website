@@ -1,0 +1,371 @@
+@media screen and (max-width:1199px){
+    /* About Section */
+    .teacher .words{
+        clear: both;
+    }
+    #programs #programs-content .program .description .audio figcaption{
+        padding-top: 1rem;
+    }
+    #programs #programs-content .program .description .audio audio{
+        height: revert;
+    }
+    figure.audio{
+        margin-bottom: 0;
+    }
+    #our-voices #voices .carousel-control-prev, #our-voices #voices .carousel-control-next{
+        width: 5%;
+    }
+    #our-voices #voices .carousel-inner .carousel-item iframe{
+        width: 90vw;
+        height: 50vw;
+    }
+}
+@media screen and (max-width:1199px) and (min-width:768px){
+    #contact-us #details{
+        grid-template-columns: 1fr 1fr;
+    }
+    #contact-us #call{
+        right: 6vw;
+        bottom: 5vw;
+        width: 32vw;
+    }
+    #contact-us #music{
+        right: 25vw;
+        bottom: 25vw;
+        width: 12vw;
+    }
+
+    /* Program Display */
+    #programs #programs-content .program{
+        height: auto;
+    }
+    #programs #programs-content .program .program-pic{
+        height: 24vw;
+        width: 45%;
+    }
+    #programs #programs-content .program:nth-child(odd) .description{
+        float: none;
+        width: 100%;
+    }
+    #programs #programs-content .program:nth-child(even) .description{
+        float: none;
+        width: 100%;
+    }
+    #programs #programs-content .program:nth-child(even) .program-pic{
+        margin: 0vw 0vw 1.5vw 2vw;
+    }
+    #programs #programs-content .program:nth-child(odd) .program-pic{
+        margin: 0vw 2vw 1.5vw 0vw;
+    }
+    #programs #programs-content .program .description .content{
+        overflow: visible;
+        margin-bottom: 0;
+    }
+    #programs #programs-content .program .program-name{
+        margin-bottom: 1rem;
+    }
+    
+
+    #events-view #events{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    /* About Section Styling */
+    #main-2 #team #team-members, #main-2 #team #web-developer{
+        grid-template-columns: 1fr;
+        padding: 5vw 15vw 5vw 15vw;
+    }
+    #main-2 #team #seniorexecutives_executives{
+        grid-template-columns: repeat(2,1fr);
+    }    
+}
+@media screen and (max-width:991px) {
+    #main-2-pics{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        justify-items: center;
+    }
+    #main-2-pics #p1,#main-2-pics #p2{
+        position: initial;
+        width: 100%;
+    }
+    #main-2-pics #p3{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        height: 100%;
+        width: 50%;
+    }
+    #events-view .heading{
+        padding-top: 3.5rem;
+    }
+    .event-carousel{
+        transform: translateZ(-40vw);
+    }
+    .scene{
+        margin-top: 20vw;
+        margin-bottom: 15vw;
+    }
+    div#indicators-container{
+        bottom: -12vw;
+    }
+    #events-view button#view-all{
+        margin-top: 10vw;
+        margin-bottom: 8vw;
+    }
+    img.movers{
+        height: 20%;
+        width: 10%;
+        top: 40%;
+    }
+    #contact-us h2{
+        padding-top: 2.5rem;
+    }
+
+    /* Footer */
+    footer{
+        padding-top: 2rem;
+        grid-template-columns: 1fr 0.4fr
+    }
+    footer .member-form{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    /* Programs */
+    #programs h3{
+        font-size: 2rem;
+        padding: 0vw 5vw 2.2vw 5vw;
+    }
+    footer .member-form input{
+        width: 100%;
+    }
+    /* Events Section */
+    #events-view #live-past-search{
+        grid-template-columns: 1fr;
+        grid-gap:1rem;
+    }
+    #events-view #live-past-search #live-past_events #live-events, #events-view #live-past-search #live-past_events #past-events{
+        width: 48%;
+        padding: 0.5rem 1rem 0.5rem 1rem;
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    #events-view #live-past-search #search-bar #search-input{
+        padding: 1rem 0vw 1rem 5vw;
+    }
+    /* Event Registration Form */
+    #event-registration-form{
+        grid-template-columns: 1fr;
+    }
+    #event-registration-form #event-details div img{
+        height: auto;
+    }
+    hr#btw-event-participant{
+        border: 0;
+    }
+    #event-registration-form #participant-details div p{
+        line-height: 2rem;
+    }
+    #event-registration-form #participant-details div input{
+        width: 100%;
+        padding: 1rem;
+        padding-left: 8vw;
+        padding-right: 8vw;
+        margin-bottom: 1rem;
+        
+    }
+    #event-registration-form #participant-details div button{
+        padding: 1rem;
+        padding-left: 8vw;
+        padding-right: 8vw;
+    }
+    /* Event Glimpses */
+    #glimpses h2{
+        padding: 1.5rem 8vw 0.8vw 8vw;
+    }
+
+}
+@media screen and (max-width:767px) {
+    div#home[homeornot="home"]{
+        min-height: 100vh;
+    }
+    div#main-2{
+        min-height: 100vh;
+    }
+    div#main-2-text p{
+        padding-left: 10vw;
+        padding-right: 10vw;
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+    }
+    div#events-view{
+        min-height: 100vh;
+    }
+    /* Contact Section */
+    #contact-us #details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #open-hours,#address,#support{
+        width: 90vw;
+    }
+    div#contact-us{
+        min-height: 100vh;
+    }
+    #contact-us #call, #contact-us #music{
+        visibility: hidden;
+    }
+
+    /* Footer */
+    footer{
+        grid-template-columns: 1fr;
+    }
+    footer .social-media .logo img{
+        float: left;
+        margin-right: 2vw;
+    }
+    footer .member-form input{
+        height: 3.5rem;
+        padding-left: 2rem;
+    }
+    footer .member-form #submit-button{
+        height: 3.5rem;
+        padding-left: 2rem;
+        width: 100%;
+    }
+    footer div.tab-links div{
+        padding: 0;
+    }
+    footer div.tab-links div a{
+        font-size: 4.2vw;
+    }
+    footer div.tab-links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: center;
+        /* grid-row-start: 3;
+        grid-row-end: 4; */
+    }
+    footer .member-form{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        /* grid-row-start: 2;
+        grid-row-end: 3; */
+    }
+    #footer-above-member-form{
+        visibility: visible;
+        color: rgb(255, 255, 255);
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    .footer-vertical-bars{
+        visibility: visible;
+        color: rgba(255, 255, 255, 0.404);
+        font-size: 4.2vw;
+        line-height: 2rem;
+    }
+
+    /* Program */
+    #programs #programs-content{
+        height: auto;
+    }
+    #programs #programs-content .program{
+        height: auto;
+    }
+    #programs #programs-content .program .program-pic{
+        width: 100%;
+        height: auto;
+        float: none;
+    }
+    #programs #programs-content .program .description{
+        width: 100%;
+        float: none;
+        padding: 5vw;
+    }
+    #programs #programs-content .program .program-name{
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    #programs #programs-content .program .description .content{
+        max-height: 70vw;
+        margin-bottom: 0;
+        overflow: auto;
+    }
+    #programs #programs-content .program:nth-child(odd) .description{
+        float: none;
+    }
+    #programs #programs-content .program:nth-child(even) .description{
+        float: none;
+    }
+    #programs #programs-content .program:nth-child(even) .program-pic{
+        float: none;
+    }
+    #programs #programs-content .program:nth-child(odd) .program-pic{
+        float: none;
+    }
+    #programs #programs-content .program .description .audio div{
+        flex-direction: column;
+    }
+    #programs #programs-content .program .description .audio audio{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    #programs #programs-content .program .description .audio div button.recordings-audios{
+        width: 100%;
+        padding: 0.5rem 1rem;
+    }
+    #programs #programs-content .program .description div.audios-list[active="1"]{
+        width: 90vw;
+        height: 90vh;
+        top: 5vh;
+        left: 5vw;
+    }
+    /* Event Section */
+    #events-view #events{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #events-view #events div p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    /* About Section */
+    .teacher .teacher-pic, .teacher .teacher-about{
+        float: none !important;
+        width: 100% !important;
+        padding: 1vw;
+        margin: 0 !important;
+    }
+    .teacher .teacher-pic{
+        width: 80% !important;
+        margin-left: 10% !important;
+    }
+    .teacher .teacher-about .teacher-name{
+        margin-top: 1rem;
+        font-size: 2rem;
+        line-height: 2.3rem;
+    }
+    .teacher .teacher-about .teacher-position{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+    }
+    .teacher .words{
+        font-size: 1.5rem;
+    }
+    #main-2 #team #team-members .member, #main-2 #team #web-developer .member{
+        flex-direction: column;
+    }
+    #main-2 #team #team-members, #main-2 #team #web-developer{
+        grid-template-columns: 1fr;
+        /* padding: 5vw 15vw 5vw 15vw; */
+    }
+    #main-2 #team #team-members .member .member-pic-container, #main-2 #team #web-developer .member .member-pic-container{
+        width: 60%;
+    }
+    #main-2 #team #team-members .member .member-description, #main-2 #team #web-developer .member .member-description{
+        width: 100%;
+    }
+    #main-2 #team #seniorexecutives_executives{
+        grid-template-columns: repeat(1,1fr);
+    }
+}

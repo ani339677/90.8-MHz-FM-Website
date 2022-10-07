@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap');
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: rgba(10, 19, 26, 0.99);
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.form-signin input[type="password"] {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-bottom: 10px;
+}
+
+.inputLabel{
+  color: whitesmoke;
+}
+
+label#remember{
+  color: whitesmoke;
+}
+
+h1{
+  color: whitesmoke;
+}
+
+button#signin{
+  background-color: #F7DE60;
+  color: rgba(10, 19, 26, 0.99);
+  border: 0;
+  font-family: Poppins;
+}
+
+p#fail{
+  color: rgb(234, 0, 0);
+}
+
+div.fail{
+  display: flex;
+  justify-content: center;
+}
+
+/* .form-signin input:-webkit-autofill + label{
+  color: black;
+} */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+  border: 1px solid #F7DE60;
+  -webkit-text-fill-color: #F7DE60;
+  box-shadow: none;
+  -webkit-box-shadow: 0 0 0px 1000px rgba(0, 0, 0, 0.623) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}

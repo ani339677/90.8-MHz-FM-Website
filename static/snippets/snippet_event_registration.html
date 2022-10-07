@@ -1,0 +1,61 @@
+<div id="home">
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid px-0">
+          <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
+            <ul class="navbar-nav text-center align-middle">
+              <li class="nav-item">
+                <a id="hom-link" class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a id="abt-link" class="nav-link active" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a id="prg-link" class="nav-link active" href="#">Programs</a>
+              </li>
+              <li class="nav-item">
+                <a id="evn-link" class="nav-link active" href="#">Events</a>
+              </li>
+              <li class="nav-item">
+                <a id="con-link" class="nav-link active" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+</div>
+
+<div id="event-registration-form">
+    <div id="event-details">
+        <div id="back-to-events"> <img src="assets/svg/back_to_events.svg" alt="" id="event-registration-back-logo"><div id="event-registration-back-button"> Back to events</div></div>
+        <div><img src="data/eventPics/{{eventName}}.png" alt=""></div>
+        <div><p id="event-name">{{eventName}}</p></div>
+        <div><p id="event-description">{{description}}</p></div>
+        <div id="ODTV-mega-container">
+        <div><span class="ODTV-container"> <span class="event-ODTV">Event Organiser :</span> <span class="ODTV">{{eventOrganiser}}</span></span></div>
+        <div><span class="ODTV-container"> <span class="event-ODTV">Date :</span> <span class="ODTV">{{date}}</span> </span></div>
+        <div><span class="ODTV-container"> <span class="event-ODTV">Timings :</span> <span class="ODTV">{{time}}</span> </span></div>
+        <div><span class="ODTV-container"> <span class="event-ODTV">Venue :</span> <span class="ODTV">{{venue}}</span> </span></div>
+        </div>
+    </div>
+    <hr id="btw-event-participant">
+    <div id="participant-details">
+        <div>
+            <p>Register for {{eventName}}</p>
+            <hr>
+        </div>
+        <form action="/event_register" method="post">
+        <div><input type="text" name="full_name" id="name" placeholder="Name"></div>
+        <div><input type="number" name="phone_number" id="phone-number" placeholder="Phone Number"></div>
+        <div><input type="email" name="email_id" id="email-id" placeholder="Email ID"></div>
+        <div><input type="number" name="university_roll_no" id="urn" placeholder="University Roll Number"></div>
+        <div><input type="text" name="class" id="class" placeholder="Class"></div>
+        <div><input type="text" name="branch" id="branch" placeholder="Branch"></div>
+        <input type="hidden" name="eventName" value="{{eventName}}">
+        <div><button type="submit">SUBMIT</button></div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Poppins;
+}
+
+body{
+    background-color: rgba(10, 19, 26, 0.99);
+}
+h2{
+    color: #F7DE60;
+    text-align: center;
+}
+div#add-event-container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 30rem;
+    padding: 0 0.7rem;
+}
+input, textarea{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.7rem 0rem;
+    border-radius: 0.2rem;
+    border: none;
+}

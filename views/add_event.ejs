@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+
+    <link rel="stylesheet" href="css/add_event.css">
+</head>
+<body>
+    <h2>Add an EVENT</h2>
+    <div id="add-event-container">
+        <form action="/addevent" method="post">
+            <input type="text" name="eventName" placeholder="Event Name" required>
+            <textarea name="description" id="" cols="30" rows="10" placeholder="Description" required></textarea>
+            <input type="date" name="date" id="" placeholder="Date" required>
+            <input type="time" name="time" id="" placeholder="Time" required>
+            <input type="text" name="venue" placeholder="Venue" required>
+            <input type="text" name="eventOrganiser" placeholder="Event Organiser" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+</html>

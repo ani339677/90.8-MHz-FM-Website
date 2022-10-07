@@ -1,0 +1,98 @@
+<%- include('header'); -%>
+<div id="programs">
+    <h2>PROGRAMS</h2>
+    <h3>You hear what we say and we say what you want to hear</h3>
+    <hr>
+    <div id="programs-content">
+        <% programs.forEach(function(program){ %>
+            <% var pName=program.programName; %>
+            <div class="program">
+                <img class="program-pic" src="/data/programPics/<%=program.programName%>.jpg" alt="">
+                <div class="description">
+                    <p class="program-name"><%=pName%></p>
+                    <p class="content"><%=program.description%></p>
+                    <figure class="audio">
+                        <figcaption>Listen to <%=pName%>:</figcaption>
+                        <div>
+                          <% if (audioFiles[pName]){ %>
+                            <% if (audioFiles[pName].length!==0){ %>
+                            <audio controls src="/data/programAudios/<%=program.programName%>/<%=audioFiles[pName][0]%>">
+                                Your browser does not support the <code>audio</code> element.
+                            </audio>
+                            <button class="recordings-audios present" id="<%=pName.replace(/\s/g,'')%>">More</button>
+                            <% } else{ %>
+                            <audio controls>
+                                Your browser does not support the <code>audio</code> element.
+                            </audio>
+                            <button class="recordings-audios not-present" id="<%=pName.replace(/\s/g,'')%>">More</button>
+                            <% } %>
+                          <% } else{ %>
+                            <audio controls>
+                                Your browser does not support the <code>audio</code> element.
+                            </audio>
+                            <button class="recordings-audios not-present" id="<%=pName.replace(/\s/g,'')%>">More</button>
+                          <% } %>
+                        </div>
+                    </figure>
+                    
+                    <div class="audios-list" active="0" id="<%=pName.replace(/\s/g,'')%>">
+                        <button id="<%=pName.replace(/\s/g,'')%>" type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                        <div class="audioFilesList">
+                            <div>Listen to <%=pName%>:</div>
+                            <% if (audioFiles[pName]){ %>
+                              <% audioFiles[pName].forEach(function(audio){ %>
+                                <audio controls src="/data/programAudios/<%=pName%>/<%=audio%>"> Your browser does not support the <code>audio</code> element. </audio>
+                              <% }); %>
+                            <% } %>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>
+<div id="our-voices">
+  <h3>OUR VOICES</h3>
+  <hr>
+  <div id="voices" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active" data-bs-interval="false">
+        <iframe src="https://www.youtube.com/embed/8-isd5UG0zs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Guftagu By 90.8MHz on Spotify</h5>
+          <p>Ukraine-Russia Crisis</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="false">
+        <iframe src="https://www.youtube.com/embed/cuzCbQ0THKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Assi Te Saada Samaaj</h5>
+          <p>An Exclusive Talk Show With Sarghi Kaur Barring</p>
+        </div>
+      </div>
+
+      <div class="carousel-item" data-bs-interval="false">
+        <iframe src="https://www.youtube.com/embed/AK3RsBWeb1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Happy Teacher's Day</h5>
+          <p>What Our Teachers Go Through in Online Classes</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#voices" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#voices" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div id="gtl-container">
+    <a href="/curr_live" target="_blank" class="go-to-live"><button class="go-to-live">Listen to LIVE shows >></button></a>
+  </div>
+</div>
+<%- include('footer'); -%>

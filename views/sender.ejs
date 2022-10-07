@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= eventName %> | Live</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        @import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            padding-top: 7vw;
+            background-color: rgba(10, 19, 26, 0.99);
+            box-sizing: border-box;
+        }
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        button{
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            background-color: #F7DE60;
+            color: rgba(10, 19, 26, 0.99);
+            font-size: 2rem;
+            box-shadow: inset 0 0 0 4px rgba(10, 19, 26, 0.99);
+            border: medium solid #F7DE60;
+            font-family: Poppins;
+            font-weight: 800;
+        }
+        button:hover{
+            cursor: pointer;
+        }
+        h1{
+            color: rgb(222, 0, 0);
+            font-family: Poppins;
+            text-align: center;
+            margin: 2.5rem 2rem;
+            letter-spacing: 0.2rem;
+            font-size: 3rem;
+            line-height: 3.2rem;
+        }
+        div#listeners{
+            text-align: center;
+            color: whitesmoke;
+            padding: 2rem;
+            font-family: Poppins;
+            font-size: 2rem;
+            letter-spacing: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= eventName %> streaming LIVE!</h1>
+    <div><button>MUTE</button></div>
+    <div id="listeners"></div>
+</body>
+<script>
+    var peer = new Peer();
+    let audio;
+    let a_stream;
+    let div_listeners=document.getElementById("listeners");
+    const socket = io();
+    socket.on("connect", () => {
+        //console.log(socket.id);
+        socket.emit("new-connection",{si: socket.id, program: "<%= eventName %>"})
+    });
+    socket.on("<%= eventName %>disconnect",function(nou){
+        console.log("User Disconnected!",nou);
+        usersUpdate(nou);
+    });
+    socket.on("<%= eventName %>", (ob) => {
+        console.log("Connected user:");
+        console.log(ob.peerId);
+        connectToNewUser(ob.peerId);
+        usersUpdate(ob.nou);
+    });
+    navigator.mediaDevices.getUserMedia({ video: false, audio: true })
+        .then(function(stream){
+            a_stream=stream;
+            audio = stream.getAudioTracks();
+    });
+    
+    function usersUpdate(listeners){
+        if (listeners>1){
+            div_listeners.innerHTML=listeners+" users are listening LIVE!";
+        } else if (listeners==1){
+            div_listeners.innerHTML=listeners+" user is listening LIVE!";
+        } else{
+            div_listeners.innerHTML="";
+        }
+    }
+
+    function connectToNewUser(userId){
+        console.log(a_stream);
+        var call = peer.call(userId, a_stream);
+        console.log("Called: ",call);
+    }
+    document.querySelector("button").addEventListener("click", function(){
+        console.log(audio);
+        console.log("Button Clicked!");
+        console.log(this.innerHTML);
+        if (audio[0].enabled===true){
+            audio[0].enabled=false;
+            this.innerHTML="UNMUTE";
+        }
+        else{
+            audio[0].enabled=true;
+            this.innerHTML="MUTE";
+        }
+    })
+    window.addEventListener("beforeunload", function(event){
+        event.preventDefault();
+        event.returnValue = '';
+    })
+</script>
+</html>
