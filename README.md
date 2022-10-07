@@ -1,7 +1,8 @@
 # 90.8-MHz-FM-Website
 
 ## Requirements
-1. Following dependencies:
+1. **Node installed on server.**
+1. **Following dependencies:**
 - "body-parser": "^1.19.1"
 - "dotenv": "^16.0.3"
 - "ejs": "^3.1.6"
@@ -12,3 +13,5 @@
 - "nodemon": "^2.0.20"
 - "socket.io": "^4.5.2"
 - "sweetalert": "^2.1.2"
+2. **Creation of .env file to create Environment Variables for Username and Password.**
+3. **MongoDB installed on linux system with an active server.**
