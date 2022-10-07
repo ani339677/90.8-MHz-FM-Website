@@ -365,8 +365,6 @@ io.on("connection", (socket) => {
 });
 
 //Add an event
-app.get("/add_event", function(req,res){
-  res.render("add_event");
-})
+
 
 
