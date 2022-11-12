@@ -7,7 +7,7 @@
         <% programs.forEach(function(program){ %>
             <% var pName=program.programName; %>
             <div class="program">
-                <img class="program-pic" src="/data/programPics/<%=program.programName%>.jpg" alt="">
+                <img class="program-pic" src="/fm//data/programPics/<%=program.programName%>.jpg" alt="">
                 <div class="description">
                     <p class="program-name"><%=pName%></p>
                     <p class="content"><%=program.description%></p>
@@ -16,7 +16,7 @@
                         <div>
                           <% if (audioFiles[pName]){ %>
                             <% if (audioFiles[pName].length!==0){ %>
-                            <audio controls src="/data/programAudios/<%=program.programName%>/<%=audioFiles[pName][0]%>">
+                            <audio controls src="/fm//data/programAudios/<%=program.programName%>/<%=audioFiles[pName][0]%>">
                                 Your browser does not support the <code>audio</code> element.
                             </audio>
                             <button class="recordings-audios present" id="<%=pName.replace(/\s/g,'')%>">More</button>
@@ -41,7 +41,7 @@
                             <div>Listen to <%=pName%>:</div>
                             <% if (audioFiles[pName]){ %>
                               <% audioFiles[pName].forEach(function(audio){ %>
-                                <audio controls src="/data/programAudios/<%=pName%>/<%=audio%>"> Your browser does not support the <code>audio</code> element. </audio>
+                                <audio controls src="/fm/data/programAudios/<%=pName%>/<%=audio%>"> Your browser does not support the <code>audio</code> element. </audio>
                               <% }); %>
                             <% } %>
                         </div>
@@ -92,7 +92,7 @@
     </button>
   </div>
   <div id="gtl-container">
-    <a href="/curr_live" target="_blank" class="go-to-live"><button class="go-to-live">Listen to LIVE shows >></button></a>
+    <a href="/fm/curr_live" target="_blank" class="go-to-live"><button class="go-to-live">Listen to LIVE shows >></button></a>
   </div>
 </div>
 <%- include('footer'); -%>

@@ -9,19 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fm/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fm/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fm/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fm/assets/img/favicon/site.webmanifest">
 
-    <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/media_queries.css">
+    <link rel="stylesheet" href="/fm/css/bootstrap.css">
+    <link rel="stylesheet" href="/fm/css/style.css">
+    <link rel="stylesheet" href="/fm/css/media_queries.css">
 
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/ajax-utils.js"></script>
-    <script src="js/script.js"></script>
+    <script src="/fm/js/bootstrap.js"></script>
+    <script src="/fm/js/jquery-3.6.0.min.js"></script>
+    <script src="/fm/js/ajax-utils.js"></script>
+    <script src="/fm/js/script.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </head>
@@ -30,7 +30,7 @@
     <div id="home" homeornot="home">
         <nav class="navbar navbar-expand-md navbar-dark">
             <div class="container-fluid px-0">
-              <a class="navbar-brand" href="#"><img src="assets/img/logo.png" alt=""></a>
+              <a class="navbar-brand" href="#"><img src="/fm/assets/img/logo.png" alt=""></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -43,7 +43,7 @@
                     <a id="abt-link" class="nav-link active" href="#">About</a>
                   </li>
                   <li class="nav-item">
-                    <a id="prg-link" class="nav-link active" href="/programs">Programs</a>
+                    <a id="prg-link" class="nav-link active" href="/fm/programs">Programs</a>
                   </li>
                   <li class="nav-item">
                     <a id="evn-link" class="nav-link active" href="#">Events</a>
@@ -75,9 +75,9 @@
 
         </div>
         <div id="main-2-pics">
-            <img id="p1" src="assets/img/main-2-1.png" alt="">
-            <img id="p2" src="assets/img/main-2-2.png" alt="">
-            <img id="p3" src="assets/img/main-2-3.png" alt="">
+            <img id="p1" src="/fm/assets/img/main-2-1.png" alt="">
+            <img id="p2" src="/fm/assets/img/main-2-2.png" alt="">
+            <img id="p3" src="/fm/assets/img/main-2-3.png" alt="">
         </div>
     </div>
     <div id="events-view">
@@ -88,8 +88,8 @@
             <div class="event-carousel">
                 <!-- Event Carousel to be Added -->
             </div>
-            <img src="assets/svg/chevron-compact-left.svg" class="bi bi-chevron-compact-left movers" alt="">
-            <img src="assets/svg/chevron-compact-right.svg" class="bi bi-chevron-compact-right movers" alt="">
+            <img src="/fm/assets/svg/chevron-compact-left.svg" class="bi bi-chevron-compact-left movers" alt="">
+            <img src="/fm/assets/svg/chevron-compact-right.svg" class="bi bi-chevron-compact-right movers" alt="">
             <div id="indicators-container">
                 <div class="indicators">
                     <div class="prev-indi"></div>
@@ -130,15 +130,15 @@
                 </div>
             </div>
         </div>
-        <img id="music" src="assets/img/contactus1.png" alt="">
-        <img id="call" src="assets/img/contactus2.png" alt="">
+        <img id="music" src="/fm/assets/img/contactus1.png" alt="">
+        <img id="call" src="/fm/assets/img/contactus2.png" alt="">
     </div>
     </div>
     </div>
     <footer>
         <div class="social-media">
             <div class="logo">
-                <img src="assets/img/logo.png" alt="">
+                <img src="/fm/assets/img/logo.png" alt="">
             </div>
             <div class="comm-name">90.8MHz FM Community Radio</div>
             <div class="insta-fb-twr">
@@ -163,13 +163,13 @@
             <div><a href="#home" id="f-hom-link">Home</a></div><span class="footer-vertical-bars">|</span>
             <div><a href="#home" id="f-abt-link">About</a></div><span class="footer-vertical-bars">|</span>
             <div><a href="#home" id="f-evn-link">Events</a></div><span class="footer-vertical-bars">|</span>
-            <div><a href="/programs" id="f-prg-link">Programs</a></div><span class="footer-vertical-bars">|</span>
+            <div><a href="/fm/programs" id="f-prg-link">Programs</a></div><span class="footer-vertical-bars">|</span>
             <div><a href="#home" id="f-con-link">Contact</a></div>
         </div>
         <div class="member-form">
             <hr id="footer-above-member-form">
             <p>Become a member</p>
-            <form action="/" method="post">
+            <form action="/fm" method="post">
                 <input type="email" name="email_id" id="em_id" placeholder="Email Id" required>
                 <input type="number" name="phone_number" id="ph_no" placeholder="Phone Number" required>
 
@@ -278,7 +278,7 @@
     }).then(function(value){
         if(value){
             console.log("Redirected to live programs!");
-            document.location.href="/curr_live";
+            document.location.href="/fm/curr_live";
         }
     });
 </script>

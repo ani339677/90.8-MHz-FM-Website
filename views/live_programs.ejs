@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Programs | Option</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fm/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fm/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fm/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fm/assets/img/favicon/site.webmanifest">
 
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -103,92 +103,23 @@
 
             <% ap.forEach(function(prg){ %>
                 <div class="program">
-                    <form action="/go_live" method="post">
+                    <form action="/fm/go_live" method="post">
                         <% if (clp.includes(prg)){ %>
                             <button disabled>
                                 <input type="hidden" name="eventName" value="<%= prg %>">
-                                <img src="data/programPics/<%= prg %>.jpg" alt="">
+                                <img src="/fm/data/programPics/<%= prg %>.jpg" alt="">
                             <p><%= prg %> - LIVE</p>
                         </button>
                         <% } else{ %>
                             <button>
                                 <input type="hidden" name="eventName" value="<%= prg %>">
-                                <img src="data/programPics/<%= prg %>.jpg" alt="">
+                                <img src="/fm/data/programPics/<%= prg %>.jpg" alt="">
                                 <p><%= prg %></p>
                             </button>
                         <% } %>
                     </form>
                 </div>
             <% }) %>
-            
-
-
-
-
-
-            <!-- <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="ASSI TE SAADA SAMAJ">
-                        <img src="assets/ASSI TE SAADA SAMAJ.jpg" alt="">
-                        <p>ASSI TE SAADA SAMAJ</p>
-                    </button>
-                </form>
-            </div>
-            <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="SAADA CAMPUS">
-                        <img src="assets/SAADA CAMPUS.jpg" alt="">
-                        <p>SAADA CAMPUS</p>
-                    </button>
-                </form>
-            </div>
-            <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="RU-BA-RU">
-                        <img src="assets/RU-BA-RU.jpg" alt="">
-                        <p>RU-BA-RU</p>
-                    </button>
-                </form>
-            </div>
-            <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="EK MULAQAT">
-                        <img src="assets/EK MULAQAT.jpg" alt="">
-                        <p>EK MULAQAT</p>
-                    </button>
-                </form>
-            </div>
-            <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="AFSANE PUNJABIYAAN DE">
-                        <img src="assets/AFSANE PUNJABIYAAN DE.jpg" alt="">
-                        <p>AFSANE PUNJABIYAAN DE</p>
-                    </button>
-                </form>
-            </div>
-            <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="SEHAT SAMBHAL">
-                        <img src="assets/SEHAT SAMBHAL.jpg" alt="">
-                        <p>SEHAT SAMBHAL</p>
-                    </button>
-                </form>
-            </div>
-            <div class="program">
-                <form action="/go_live" method="post">
-                    <button>
-                        <input type="hidden" name="eventName" value="CAREER AWARENESS">
-                        <img src="assets/CAREER AWARENESS.jpg" alt="">
-                        <p>CAREER AWARENESS</p>
-                    </button>
-                </form>
-            </div> -->
         </div>
     </div>
 </body>

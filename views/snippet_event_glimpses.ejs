@@ -1,6 +1,6 @@
 <%- include('header'); -%>
 <div id="glimpses">
-    <div id="back-to-events"> <img src="assets/svg/back_to_events.svg" alt="" id="glimpses-back-logo"><div id="glimpses-back-button"> Back to events</div></div>
+    <div id="back-to-events"> <img src="/fm/assets/svg/back_to_events.svg" alt="" id="glimpses-back-logo"><div id="glimpses-back-button"> Back to events</div></div>
     <h2>GLIMPSES OF</h2>
     <h3> <%= event_name %></h3>
     <hr>
@@ -21,17 +21,17 @@
                     <% if (i===0){ %>
                         <div class="carousel-item active">
                             <% if(glimpses[i].ext=='.mp4' || glimpses[i].ext=='.mkv' || glimpses[i].ext=='.avi' ){ %>
-                                <video src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" autoplay controls loop muted></video>
+                                <video src="/fm/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" autoplay controls loop muted></video>
                             <% } else{ %>
-                                <img src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" alt="">
+                                <img src="/fm/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" alt="">
                             <% } %>
                         </div>
                     <% } else{ %>
                         <div class="carousel-item">
                             <% if(glimpses[i].ext=='.mp4' || glimpses[i].ext=='.mkv' || glimpses[i].ext=='.avi' ){ %>
-                                <video src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" autoplay controls loop muted></video>
+                                <video src="/fm/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" autoplay controls loop muted></video>
                             <% } else{ %>
-                                <img src="/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" alt="">
+                                <img src="/fm/data/eventGlimpses/<%= event_name %>/<%= glimpses[i].fName %>" alt="">
                             <% } %>
                         </div>
                     <% } %>

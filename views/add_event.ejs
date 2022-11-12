@@ -6,13 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Event</title>
 
-    <link rel="stylesheet" href="css/add_event.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fm/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fm/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fm/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fm/assets/img/favicon/site.webmanifest">
+
+    <link rel="stylesheet" href="/fm/css/add_event.css">
 </head>
 <body>
     <h2>Add an EVENT</h2>
     <div id="add-event-container">
-        <form action="/addevent" method="post">
+        <form action="/fm/addevent" method="post" enctype="multipart/form-data">
             <input type="text" name="eventName" placeholder="Event Name" required>
+            <input type="file" name="event_poster" id="" placeholder="Event Display Picture" required>
             <textarea name="description" id="" cols="30" rows="10" placeholder="Description" required></textarea>
             <input type="date" name="date" id="" placeholder="Date" required>
             <input type="time" name="time" id="" placeholder="Time" required>

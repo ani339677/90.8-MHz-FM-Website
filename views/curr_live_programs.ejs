@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Live Programs</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="assets/img/favicon/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/fm/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fm/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fm/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/fm/assets/img/favicon/site.webmanifest">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="css/curr_live_programs.css">
+    <link rel="stylesheet" href="/fm/css/curr_live_programs.css">
 </head>
 <body>
     <div>
@@ -33,10 +33,10 @@
         <div class="programs-grid">
             <% currLive.forEach(function(prg){ %>
                 <div class="program">
-                    <form action="/join_live" method="post">
+                    <form action="/fm/join_live" method="post">
                         <button>
                             <input type="hidden" name="eventName" value="<%= prg %>">
-                            <img src="data/programPics/<%= prg %>.jpg" alt="">
+                            <img src="/fm/data/programPics/<%= prg %>.jpg" alt="">
                             <p><%= prg %></p>
                         </button>
                     </form>

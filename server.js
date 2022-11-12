@@ -1,21 +1,26 @@
 //jshint esversion:6
 require('dotenv').config()
 const express = require("express");
+const fs = require("fs");
+const path = require("path");
 const bodyParser = require("body-parser");
+// const https = require('https');
+// const options={
+//   key: fs.readFileSync('localhost.key'),
+//   cert: fs.readFileSync('localhost.crt')
+// }
 const { createServer } = require("http");
 const { Server } = require("socket.io");
 const nodemailer = require('nodemailer');
 const {google} = require("googleapis");
-const CLIENT_ID = process.env.CLIENT_ID;
-const CLIENT_SECRET = process.env.CLIENT_SECRET;
+const CLIENT_ID = '372917835791-1cslhmea6njrmpqbod1mrrlauadv74kf.apps.googleusercontent.com';
+const CLIENT_SECRET = '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';
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-const REFRESH_TOKEN = process.env.REFRESH_TOKEN;
+const REFRESH_TOKEN = '1//04EkzH2uX-IVgCgYIARAAGAQSNwF-L9IrQBJ2aTfRhedrqn7ZcAXmxBL0pl48F3XaodGyKXa9jY3Lur3S8VmDgxI9OR-3nn1GFrU';
 const oAuth2Client = new google.auth.OAuth2(CLIENT_ID, CLIENT_SECRET, REDIRECT_URI);
 oAuth2Client.setCredentials({refresh_token: REFRESH_TOKEN});
-const fs = require("fs");
-const path = require("path");
-const mongoose = require("mongoose");
 
+const mongoose = require("mongoose");
 mongoose.connect("mongodb://localhost:27017/fmcrsDB", {useNewUrlParser: true});
 
 subscribersSchema={
@@ -80,6 +85,7 @@ app.set("view engine","ejs");
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("static"));
 const httpServer = createServer(app);
+//const httpServer=https.createServer(options,app);
 const io = new Server(httpServer);
 
 httpServer.listen(process.env.PORT || 3000, function(){
@@ -106,18 +112,17 @@ let live_programs_notification = function(){
 }
 
 
-app.get("/", function(req,res){
-  
+app.get("/fm", function(req,res){
   res.render("index",{if_success: "", live_text: live_programs_notification()});
 });
 
-app.get("/programs",function(req,res){
-  const programs=require(__dirname+"/static/data/programs");
+app.get("/fm/programs",function(req,res){
+  const programs=require(__dirname+"/static/fm/data/programs");
   //console.log(programs);
   var audioFilesObj={}
   programs.forEach(function(program){
     var pName=program.programName;
-    const folderPath = __dirname+"/static/data/programAudios/"+pName;
+    const folderPath = __dirname+"/static/fm/data/programAudios/"+pName;
     try {
       if (!fs.existsSync(folderPath)) {
         fs.mkdirSync(folderPath)
@@ -141,7 +146,7 @@ app.get("/programs",function(req,res){
   res.render("snippet_programs",{if_success: "", programs:programs, audioFiles:audioFilesObj});
 })
 
-app.post("/", function(req,res){
+app.post("/fm", function(req,res){
     var em_id=req.body.email_id;
     var ph_no=req.body.phone_number;
     const newSubscriber= new subscriber({
@@ -201,9 +206,9 @@ app.post("/", function(req,res){
     
 });
 
-app.post("/event", function(req,res){
+app.post("/fm/event", function(req,res){
   //console.log(req.body);
-  const folderPath = __dirname+"/static/data/eventGlimpses/"+req.body.event_name
+  const folderPath = __dirname+"/static/fm/data/eventGlimpses/"+req.body.event_name
   try {
     if (!fs.existsSync(folderPath)) {
       fs.mkdirSync(folderPath)
@@ -224,7 +229,7 @@ app.post("/event", function(req,res){
   }
 });
 
-app.post("/event_register",function(req,res){
+app.post("/fm/event_register",function(req,res){
   const details=req.body;
   //console.log(details);
   event.find({eventName:details.eventName}, function(err,docs){
@@ -272,7 +277,7 @@ app.post("/event_register",function(req,res){
   });
 });
 
-app.get("/login", function(req,res){
+app.get("/fm/login", function(req,res){
   res.render("login",{login: ""});
 });
 
@@ -281,7 +286,7 @@ app.get("/login", function(req,res){
 let currLiveProg = [];
 let allPrograms = ["GURBANI","ASSI TE SAADA SAMAJ","SAADA CAMPUS","RU-BA-RU","EK MULAQAT","AFSANE PUNJABIYAAN DE","SEHAT SAMBHAL","CAREER AWARENESS"];
 
-app.post("/go_live", function(req,res){
+app.post("/fm//go_live", function(req,res){
   var en = req.body.eventName;
   if(!currLiveProg.includes(en)){
     currLiveProg.push(en);
@@ -292,21 +297,21 @@ app.post("/go_live", function(req,res){
   }
 })
 
-app.post("/join_live", function(req,res){
+app.post("/fm/join_live", function(req,res){
   res.render("reciever",{eventName: req.body.eventName})
 })
 
-app.get("/curr_live", function(req,res){
+app.get("/fm/curr_live", function(req,res){
   res.render("curr_live_programs",{currLive: currLiveProg});
 });
 
-app.post("/dashboard", function(req,res){
+app.post("/fm/dashboard", function(req,res){
   if (req.body.chosen==="LIVE STREAMING"){
     res.render("live_programs",{clp: currLiveProg, ap: allPrograms});
   }
 })
 
-app.post("/login", function(req,res){
+app.post("/fm/login", function(req,res){
   if (req.body.username===process.env.FM_USERNAME && req.body.password===process.env.FM_PASSWORD){
     res.render("dashboard");
   }
@@ -365,6 +370,3 @@ io.on("connection", (socket) => {
 });
 
 //Add an event
-
-
-

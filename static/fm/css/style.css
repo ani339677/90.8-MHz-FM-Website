@@ -1,0 +1,1341 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    min-height: 100vh;
+    position: relative;
+}
+div#home[homeornot="home"]{
+    width: 100%;
+    height: auto;
+    background: url("../assets/img/home_bg.png") no-repeat;
+    background-size: cover;
+    background-color: rgba(19, 28, 33, 0.99);
+    background-attachment: local;
+    background-position: center;
+}
+div#home[homeornot="not"]{
+    background-image: none;
+    background: rgba(19, 28, 33, 0.99);
+}
+#home .navbar{
+    padding: 1.5rem;
+    z-index: 10;
+}
+.navbar-brand img{
+    width: 6rem;
+    height: 6rem;
+    background-size:contain;
+    border-radius: 50%;
+    transition: box-shadow 1s;
+}
+.navbar-brand img:hover{
+    box-shadow: 0vw 0vw 5vw 4vw rgba(247, 222, 96, 0.555);
+}
+div#tabs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navbarNav ul li a{
+    padding: 1.5vw;
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-decoration-line: none;
+}
+#navbarNav ul li a:hover{
+    color: rgba(247, 222, 96, 1) !important;
+}
+button.navbar-toggler{
+    color: rgba(247, 222, 96, 1) !important;
+    margin: 1em;
+  }
+#home_main{
+    padding: 5vw;
+    text-align: center;
+    position: relative;
+    
+}
+#headphone-bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/img/Vector.png") no-repeat;
+    background-position: 70% 30%;
+    background-size: 35rem;
+    opacity: 0.2;
+}
+#FM{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    padding-top: 3rem;
+
+}
+#CR{
+    padding: 1rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    text-align: center;
+    color: #F7DE60;
+    position: relative;
+}
+#GNDEC{
+    padding: 1rem;
+    padding-bottom: 10vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+}
+hr#under-CR{
+    width: 20%;
+    margin-left: 40%;
+    opacity: 0.5;
+    position: relative;
+    margin-top: 0.5vw;
+    border: 0.001vw solid white;
+}
+div#main-2{
+    width:100%;
+    background-color: white;
+}
+div#main-2-text{
+    width: 100%;
+}
+div#main-2-text h2{
+    padding-top: 2em;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.2vw;
+    color: #F7DE60;
+}
+div#main-2-text h3{
+    padding: 1.5% 5vw 1vw 5vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3rem;
+    line-height: 3.2rem;
+    text-align: center;
+    color: #333333;
+}
+hr#under-aboutus{
+    width: 20%;
+    margin-left: 40%;
+    opacity: 0.5;
+    position: relative;
+    margin-top: 0.5vw;
+    border: 0.001vw solid auto;
+}
+div#main-2-text p{
+    padding: 3%;
+    padding-left: 20%;
+    padding-right: 20%;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.3rem;
+    line-height: 3.8rem;
+    text-align: center;
+    color: #333333;
+}
+#main-2-pics{
+    width: 100%;
+    padding: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+    position: relative;
+    height: auto;
+}
+
+#main-2-pics #p1{
+    width: 30vw;
+    position: relative;
+    top: 1vw;
+    left: 3vw;
+}
+#main-2-pics #p2{
+    width: 28vw;
+    position: relative;
+    bottom: 9vw;
+}
+#main-2-pics #p3{
+    width: 26vw;
+    position: relative;
+    right: 2.5vw;
+    bottom: 1vw;
+}
+#events-view{
+    margin: 0;
+    background-color: rgba(19, 28, 33, 0.99);
+    padding-bottom: 4vw;
+}
+#events-view .heading{
+    padding-left: 8vw;
+    padding-top: 6.5rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.3rem;
+    color: #F7DE60;
+}
+#events-view .sub-heading{
+    padding-left: 8vw;
+    padding-top: 1.5rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #FFFFFF;
+}
+#events-view hr{
+    margin-left: 8vw;
+    margin-top: 2.5rem;
+    width: 12rem;
+    opacity: 0.5;
+    border: 0.001vw solid white;
+}
+.scene{
+    margin-left: 0%;
+    height: 40vw;
+    perspective: 60vw;
+    border-radius: 2vw;
+    position: relative;
+}
+.event-carousel{
+    width: 100%;
+    height: 100%;
+    transform: translateZ(-90vw);
+    transform-style: preserve-3d;
+    position: relative;
+}
+.carousel-cell {
+    position: absolute;
+    width: 70%;
+    height: 38vw;
+    left: 15%;
+    top: 1vw;
+    border-radius: 2vw;
+    overflow: hidden;
+    line-height: 10vw;
+    font-size: 5vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: transform 1s;
+}
+.carousel-cell form, .carousel-cell form button{
+    height: 100%;
+    width: 100%;
+}
+.event-carousel .carousel-cell img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-cell:nth-child(1) { transform: rotateY(20deg) translateZ(26vw) translateX(-50vw); }
+.carousel-cell:nth-child(2) { transform: rotateY(0deg) translateZ(56vw) translateX(0); z-index: 9; }
+.carousel-cell:nth-child(3) { transform: rotateY(-20deg) translateZ(26vw) translateX(50vw); }
+
+img.movers{
+    height: 10%;
+    width: 7%;
+    position: absolute;
+    top: 45%;
+}
+.bi-chevron-compact-left{
+    left: 0%;
+}
+.bi-chevron-compact-right{
+    right: 0%;
+}
+div#indicators-container{
+    position: absolute;
+    bottom: 5vw;
+    left: 0%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%; 
+}
+div.indicators{
+    /* position: absolute;
+    bottom: 5vw;
+    left: 0%; */
+    width: 8rem;
+    /* margin-left: 47vw; */
+    display: grid;
+    grid-template-columns: 1fr 9fr 1fr;
+    grid-gap:0.5rem;
+    grid-auto-rows: minmax(0.3rem,auto);
+    transition: grid-template-columns 2s;
+}
+div.prev-indi{
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 0.3rem;
+}
+div.curr-indi{
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 0.3rem;
+}
+div.next-indi{
+    width: 100%;
+    height: 100%;
+    background: lightgrey;
+    border-radius: 0.3rem;
+}
+#events-view button#view-all{
+    /* width: 12vw;
+    margin-left: 44vw; */
+    padding: 0.5vw 2rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.25rem;
+    background-color: #F7DE60;
+    border: 0px;
+    border-radius: 0.5rem;
+    color: #25222e;
+    transition: transform 1s;
+}
+#events-view button#view-all a{
+    text-decoration: none;
+    color: #25222e;
+}
+#events-view button#view-all:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+#contact-us{
+    background-color: white;
+    position: relative;
+}
+#contact-us img{
+    position: absolute;
+}
+#contact-us h2{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    letter-spacing: 0.4rem;
+    color: #F7DE60;
+    padding-top: 5vw;
+    padding-left: 5vw;
+    padding-bottom: 0.8vw;
+}
+#contact-us h3{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    color: #333333;
+    padding-left: 5vw;
+    padding-right: 30vw;
+}
+#contact-us hr{
+    width: 12rem;
+    margin-left: 5vw;
+    margin-top: 1.5rem;
+    margin-bottom: 7vw;
+    opacity: 0.5;
+}
+#contact-us #details{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    width: 60vw;
+    padding-left: 5vw;
+    padding-bottom: 5vw;
+}
+#open-hours,#address,#support{
+    border-radius: 0.8rem;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.5rem 0.1rem rgba(0, 0, 0, 0.1);
+}
+#open-hours #op, #address #ad, #support #sup{
+    padding: 1.2rem;
+    background: rgba(247, 222, 96, 0.3);
+    border-radius: 0.8rem 0.8rem 0px 0px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+}
+#open-hours #op-details p, #address #ad-details p, #support #sup-details p{
+    padding: 0.8vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    letter-spacing: 0.25rem;
+    margin: 0;
+}
+#open-hours #op-details, #address #ad-details, #support #sup-details{
+    padding: 1.5rem;
+}
+#fm_email_id{
+    word-spacing: -0.5rem;
+}
+#contact-us #call{
+    right: 6vw;
+    bottom: 5vw;
+    width: 28vw;
+    opacity: 0.05;
+}
+#contact-us #music{
+    right: 22vw;
+    bottom: 22vw;
+    width: 10vw;
+    opacity: 0.05;
+}
+footer{
+    display: grid;
+    grid-template-columns: 0.8fr 1.5fr 1.8fr;
+    grid-gap: 1rem;
+    background: rgba(10, 19, 26, 0.99);
+    padding: 3vw;
+    padding-top: 4.5rem;
+    position: absolute;
+    top: 100%;
+}
+footer .social-media{
+    text-align: center;
+    color: white;
+}
+footer .social-media .logo img{
+    width: 6.5rem;
+}
+footer .social-media .insta-fb-twr{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+footer .social-media .comm-name{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    text-align: center;
+    padding: 1vw 2vw 3.5vw 2vw;
+}
+footer .insta-fb-twr a{
+    padding: 2% 5% 5% 5%;
+}
+footer .social-media .insta-fb-twr a:hover svg{
+    fill:#F7DE60;
+}
+footer div.tab-links div a{
+    color: white;
+    text-decoration: none;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+footer div.tab-links div a:hover{
+    color: #F7DE60;
+}
+footer div.tab-links div{
+    text-align: center;
+    padding-bottom: 1vw;
+}
+.footer-vertical-bars{
+    visibility: collapse;
+}
+footer .member-form p{
+    color: white;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-bottom: 1.5vw;
+}
+#footer-above-member-form{
+    visibility: hidden;
+    margin: 0;
+}
+footer .member-form input{
+    width: 90%;
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    border: 0px;
+    padding-left: 2.5rem;
+    margin: 0.75rem 0rem 0.75rem 0rem;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.34);
+}
+footer .member-form input#em_id{
+    margin-top: 0;
+}
+footer .member-form #submit-button{
+    height: 4.5rem;
+    border-radius: 0.5rem;
+    border: 0px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 1vw;
+    background: rgba(255, 255, 255, 0.1);
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    letter-spacing: 0.35rem;
+    line-height: 2rem;
+    color: white;
+}
+footer .member-form #submit-button:hover{
+    color: black;
+    background: white;
+}
+footer .member-form input:focus{
+    color: white;
+}
+
+.swal-button {
+    padding: 7px 19px;
+    border-radius: 4px;
+    background-color: #F7DE60;
+    color: rgba(19, 28, 33, 0.99);
+    font-size: 12px;
+    border: none;
+    text-shadow: none;
+}
+.swal-button:not([disabled]):hover{
+    background-color: rgba(19, 28, 33, 0.99);
+    color: #F7DE60;
+}
+.swal-button--cancel {
+    background-color: gainsboro;
+    color: black;
+}
+.swal-button.swal-button--cancel:hover {
+    background-color: gainsboro;
+    color: black;
+}
+.swal-button:focus{
+    box-shadow: none;
+}
+.swal-text{
+    text-align: center;
+}
+
+
+/* event section styling */
+#events-view #live-past-search{
+    display: grid;
+    grid-template-columns: 1fr 0.55fr;
+    padding: 2.5rem;
+    padding-left: 5.5vw;
+    padding-right: 5.5vw;
+}
+#events-view #live-past-search #live-past_events #live-events{
+    border: 0px;
+    border-radius: 0.3rem;
+    /* height: 3.5vw; */
+    color: rgba(51, 51, 51, 1);
+    background: #F7DE60;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.25vw;
+    padding: 1rem 2rem 1rem 2rem;
+}
+#events-view #live-past-search #live-past_events #past-events{
+    border: 0px;
+    border-radius: 0.3rem;
+    /* height: 3.5vw; */
+    color: rgba(255, 255, 255, 0.5);
+    background: #12191D;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.25vw;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-left: 2vw;
+}
+#events-view #live-past-search #live-past_events button[changeOnHover="1"]:hover{
+    color: black !important;
+    background: white !important;
+}
+#events-view #live-past-search #search-bar{
+    border-radius: 3.5rem;
+    background: rgba(255, 255, 255, 0.1);
+}
+#events-view #live-past-search #search-bar #search-button{
+    background: #ffffff00;
+    border:0;
+    height: 100%;
+    width: 15%;
+    float: right;
+    padding-right: 2vw;
+}
+#events-view #live-past-search #search-bar #search-input{
+    background: #ffffff00;
+    border:0;
+    height: 100%;
+    width: 85%;
+    float: left;
+    padding-left: 2vw;
+    font-size: 1.5rem;
+    color: white;
+}
+#events-view #live-past-search #search-bar #search-input:focus{
+    outline: none;
+}
+#events-view #live-past-search #search-bar #search-button img{
+    height: 40%;
+}
+#events-view #events{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2.75vw;
+    padding: 5.5vw;
+}
+#events-view #events #no-events-found{
+    color: rgba(255, 255, 255, 0.493);
+    font-family: Poppins;
+    font-size: 2rem;
+    text-align: center;
+}
+#events-view #events div img{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 0.7rem;
+    transition: transform 1s;
+}
+#events-view #events div img:hover{
+    cursor: pointer;
+    box-shadow: 0vw 0vw 1vw 1vw rgba(0, 0, 0, 0.376);
+    opacity: 0.7;
+    transform: scale(1.07);
+}
+#events-view #events div p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+    padding-top: 1.5vw;
+    text-align: center;
+}
+
+/* Event Registration Form Styling */
+#event-registration-form{
+    padding: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 0.0001fr 2.2fr;
+    grid-gap:2.5vw;
+    background: rgba(19, 28, 33, 0.99);
+}
+#event-registration-form #event-details{
+    padding-right: 2vw;
+}
+#event-registration-form #event-details #back-to-events{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    color: #F7DE60;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1vw;
+}
+#event-registration-form #event-details #back-to-events img{
+    width: 2rem;
+    height: 5%;
+    display: inline;
+    margin: 0;
+    margin-right: 0.5vw;
+}
+#event-registration-form #event-details #back-to-events img:hover, #event-registration-form #event-details #back-to-events div:hover{
+    cursor: pointer;
+}
+#event-registration-form #event-details div img{
+    width: 100%;
+    height: 20vw;
+    object-fit: cover;
+    border-radius: 1vw;
+    margin-bottom: 1.5rem;
+}
+#event-registration-form #event-details #event-name{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #FFFFFF;
+}
+#event-registration-form #event-details #event-description{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgba(255, 255, 255, 0.75);
+    padding-top: 1vw;
+    padding-bottom: 2.5vw;
+}
+#ODTV-mega-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+#event-registration-form #event-details div .ODTV-container{
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 5rem;
+    padding: 0.9rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    display: inline-block;
+    margin-bottom: 0.9rem;
+}
+#event-registration-form #event-details .ODTV-container .event-ODTV{
+    color: white;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 100%;
+
+}
+#event-registration-form #event-details .ODTV-container .ODTV{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 100%;
+    color: rgba(255, 255, 255, 0.66);
+    padding-left: 0.5vw;
+
+}
+hr#btw-event-participant{
+    height: 100%;
+    border: 0.005vw solid rgba(255, 255, 255, 0.548);
+}
+#event-registration-form #participant-details{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.15fr 1fr;
+}
+#event-registration-form #participant-details div p{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 3.5rem;
+    color: #F7DE60;
+}
+#event-registration-form #participant-details div hr{
+    width: 9rem;
+    border: 0.005vw solid rgba(255, 255, 255, 0.561);
+}
+#event-registration-form #participant-details div input{
+    border: 0px;
+    color: white;
+    width: 70%;
+    background: rgba(196, 196, 196, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding: 1.5rem;
+    padding-left: 3vw;
+    padding-right: 3vw;
+
+}
+#event-registration-form #participant-details div button{
+    border: 0px;
+    color: white;
+    background: rgba(196, 196, 196, 0.1);
+    border-radius: 0.5rem;
+    margin-bottom: 2vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    letter-spacing: 0.25rem;
+    padding: 1.5rem;
+    padding-left: 3vw;
+    padding-right: 3vw;
+}
+#event-registration-form #participant-details div button:hover{
+    background-color: #FFFFFF;
+    color: rgba(19, 28, 33, 0.99);
+}
+
+/* About Section Styling */
+#main-2 #teachers h3{
+    padding: 2.5%;
+    padding-bottom: 1vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+#main-2 #teachers hr{
+    opacity: 0.5;
+    width: 15%;
+    margin-left: 42.5%;
+    color: white;
+}
+.teacher{
+    /* background-color: rgba(255, 255, 255, 0.137); */
+    margin: 2vw 6vw 4vw 6vw;
+    border-radius: 1vw;
+    /* height: 21vw; */
+}
+.teacher .teacher-pic{
+    width: 25%;
+    height: 100%;
+    border-radius: 1vw 1vw 1vw 1vw;
+    object-fit: cover;
+    margin-bottom: 2vw;
+}
+.teacher:nth-child(even) .teacher-pic{
+    float: right;
+    margin-left: 5%;
+}
+.teacher:nth-child(odd) .teacher-pic{
+    float: left;
+    margin-right: 5%;
+}
+.teacher .teacher-about{
+    color: white;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 2vw 1vw 2vw 2vw;
+    width: 70%;
+    height: 100%;
+}
+.teacher:nth-child(odd) .teacher-about{
+    float: right;
+}
+.teacher:nth-child(even) .teacher-about{
+    float: left;
+}
+.teacher .teacher-about .teacher-name{
+    color: #F7DE60;
+    font-family: Poppins;
+    font-size: 3rem;
+    line-height: 3.3rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    padding-top: 0rem;
+    margin-bottom: 0.5rem;
+    margin-top: 4rem;
+}
+.teacher .teacher-about .teacher-position{
+    color: white;
+    font-family: Poppins;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    padding-top: 0rem;
+    margin-bottom: 1.5rem;
+}
+.teacher .words{
+    background-color: rgba(255, 255, 255, 0.137);
+    text-align: center;
+    font-family: 'Andada Pro', serif;
+    /* height: 80%; */
+    font-size: 2rem;
+    overflow: auto;
+    padding: 2vw;
+    border-radius: 1rem;
+    color: white;
+    /* float: right; */
+}
+#main-2 #team h3{
+    padding: 2.5%;
+    padding-bottom: 1vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+#main-2 #team hr{
+    opacity: 0.5;
+    width: 15%;
+    margin-left: 42.5%;
+    color: white;
+}
+#main-2 #team #team-members{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 5vw 5vw 3rem 5vw;
+    grid-gap: 2rem;
+}
+#main-2 #team #web-developer{
+    padding-top: 3rem;
+}
+#main-2 #team #team-members .member{
+    border: 3px solid white;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 0px 3px #F7DE60;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.137);
+}
+#main-2 #team #team-members .member[developer="true"]{
+    margin-top: 3.5rem;
+    border-radius: 0rem 1rem 1rem 1rem;
+}
+#main-2 #team #team-members .member .developed-by{
+    color: rgba(19, 28, 33, 0.99);
+    position: absolute;
+    bottom: 100%;
+    background-color: #F7DE60;
+    left: -6px;
+    padding: 0.8rem 1.8rem;
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    
+}
+#main-2 #team #team-members .member .member-pic-container{
+    border-radius: 50%;
+    width: 35%;
+    border: 5px solid #F7DE60;
+    padding: 2px;
+    margin: 1rem;
+}
+#main-2 #team #team-members .member .member-pic{
+    border-radius: 50%;
+    width: 100%;
+}
+#main-2 #team #team-members .member .member-description{
+    width: 65%;
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+#main-2 #team #team-members .member .member-description p.name{
+    font-family: Poppins;
+    font-style: normal;
+    color: white;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+#main-2 #team #team-members .member .member-description p.position{
+    font-family: Poppins;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+#main-2 #team #team-members .member .member-description p.detail{
+    font-family: Poppins;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+#main-2 #team #team-members .member .member-description div.social-contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+#main-2 #team #team-members .member .member-description div.social-contact div{
+    padding: 0 0.5rem 0 0.5rem;
+}
+#main-2 #team #seniorexecutives_executives{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 2rem;
+    padding: 0vw 3vw 2.5rem 3vw;
+}
+#main-2 #team #seniorexecutives_executives div{
+    width: 100%;
+}
+#main-2 #team #seniorexecutives_executives div table th, #main-2 #team #seniorexecutives_executives div table td{
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+#main-2 #team #seniorexecutives_executives table{
+    color: black;
+    border-radius: 1em;
+    border-radius: 1rem;
+    overflow: hidden;
+    width: 100%;
+}
+#main-2 #team #seniorexecutives_executives table tr{
+    border-bottom: 1px solid rgba(19, 28, 33, 0.99);
+}
+#main-2 #team #seniorexecutives_executives table thead{
+    background-color: #F7DE60;
+    text-align: center;
+    font-size: 1.8rem;
+}
+#main-2 #team #seniorexecutives_executives table tbody{
+    background-color: white;
+    font-size: 1.2rem;
+}
+
+
+/* Program Section Styling */
+#programs{
+    background: rgba(19, 28, 33, 0.99) ;
+}
+#programs h2{
+    color: #F7DE60;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    padding: 5vw 8vw 0.8vw 8vw;
+    letter-spacing: 0.35rem;
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+#programs h3{
+    color: white;
+    font-family: Poppins;
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    padding: 0vw 25vw 2.2vw 25vw;
+}
+#programs hr{
+    width: 20%;
+    margin-left: 40%;
+    border: 0.001vw solid white;
+    opacity: 0.5;
+    margin-bottom: 5vw;
+}
+#programs #programs-content .program{
+    background-color: rgba(255, 255, 255, 0.137);
+    margin: 2vw 6vw 4vw 6vw;
+    border-radius: 1vw;
+    height: 21vw;
+}
+#programs #programs-content .program .program-pic{
+    width: 35%;
+    height: 100%;
+    border-radius: 1vw 1vw 1vw 1vw;
+    object-fit: cover;
+}
+#programs #programs-content .program:nth-child(even) .program-pic{
+    float: right;
+}
+#programs #programs-content .program:nth-child(odd) .program-pic{
+    float: left;
+}
+#programs #programs-content .program .description{
+    color: white;
+    font-family: Poppins;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding: 2vw 1vw 2vw 2vw;
+    width: 65%;
+    height: 100%;
+}
+#programs #programs-content .program:nth-child(odd) .description{
+    float: right;
+}
+#programs #programs-content .program:nth-child(even) .description{
+    float: left;
+}
+#programs #programs-content .program .program-name{
+    color: #F7DE60;
+    font-family: Poppins;
+    font-size: 2rem;
+    font-weight: 600;
+    height: 15%;
+    line-height: 2.0rem;
+    letter-spacing: 0.2rem;
+    padding-top: 0rem;
+    margin-bottom: 0;
+}
+#programs #programs-content .program .description .content{
+    height: 55%;
+    overflow: auto;
+    padding-right: 1vw;
+    margin-bottom: 0.5rem;
+}
+#programs #programs-content .program .description .audio{
+    height: 30%;
+    margin-bottom: 0.2rem;
+}
+#programs #programs-content .program .description .audio div button.recordings-audios{
+    padding: 0.0rem 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: rgba(10, 19, 26, 0.649);
+    width: 15%;
+    overflow: hidden;
+    color: white;
+}
+#programs #programs-content .program .description div.audios-list[active="1"]{
+    width: 70vw;
+    height: 80vh;
+    top: 10vh;
+    left: 15vw;
+    position: fixed;
+    background-color: rgba(19, 28, 33, 0.99);
+    z-index: 99;
+    box-shadow: 0px 0px 100vw 100vw rgb(0 0 0 / 71%);
+    border-radius: 1rem;
+    visibility: visible;
+}
+#programs #programs-content .program .description div.audios-list[active="0"]{
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.000);
+    z-index: 0;
+    box-shadow: none;
+    border-radius: none;
+    visibility: hidden;
+}
+#programs #programs-content .program .description div.audios-list button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    box-sizing: border-box;
+    margin: 1em;
+}
+#programs #programs-content .program .description div.audios-list div.audioFilesList{
+    height: 100%;
+    overflow: auto;
+    padding: 0rem 3vw 3rem 3vw;
+}
+#programs #programs-content .program .description div.audios-list div.audioFilesList div{
+    padding: 1em;
+    width: 95%;
+}
+#programs #programs-content .program .description div.audios-list div.audioFilesList audio{
+    width: 98%;
+    margin-left: 1%;
+}
+#programs #programs-content .program .description .audio figcaption{
+    height: 40%;
+    padding-bottom: 1rem;
+    line-height: 100%;
+}
+#programs #programs-content .program .description .audio div{
+    display: flex;
+    flex-direction: row;
+    height: 60%;
+}
+#programs #programs-content .program .description .audio audio{
+    width: 80%;
+    text-align: center;
+    margin-right: 1rem;
+    height: 100%;
+}
+audio::-webkit-media-controls-panel{
+    background-color: #F7DE60;
+    border-radius: 1vw;
+}
+#our-voices{
+    padding-bottom: 3vw;
+}
+#our-voices h3{
+    padding: 2.5%;
+    padding-bottom: 1vw;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    text-align: center;
+    color: #ffffff;
+}
+#our-voices hr{
+    width: 12%;
+    margin-left: 44%;
+    color: white;
+    opacity: 0.5;
+    margin-bottom: 3vw;
+}
+#our-voices #voices .carousel-inner .carousel-item{
+    text-align: center;
+}
+#our-voices #voices .carousel-inner .carousel-item iframe{
+    border-radius: 0.8rem;
+    width: 80vw;
+    height: 40vw;
+}
+#our-voices #voices .carousel-control-prev, #our-voices #voices .carousel-control-next{
+    width: 10%;
+}
+#our-voices #voices .carousel-caption{
+    bottom: 2.5rem;
+}
+
+/* Event glimpses styling */
+#glimpses #back-to-events{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #F7DE60;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 3vw;
+}
+#glimpses #back-to-events img{
+    width: 1.5rem;
+    display: inline;
+    margin-right: 0.5vw;
+    margin-left: 4.5vw;
+}
+#glimpses #back-to-events img:hover, #glimpses #back-to-events div:hover{
+    cursor: pointer;
+}
+#glimpses h2{
+    color: #F7DE60;
+    text-align: center;
+    font-family: Poppins;
+    font-weight: 400;
+    padding: 1rem 8vw 0.8vw 8vw;
+    letter-spacing: 0.25rem;
+    font-size: 2rem;
+    line-height: 2rem;
+}
+#glimpses h3{
+    color: white;
+    font-family: Poppins;
+    font-size: 3.5rem;
+    font-weight: 100;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.35rem;
+    padding-bottom: 1vw;
+}
+#glimpses hr{
+    width: 15%;
+    margin-left: 42.5%;
+    border: 0.001vw solid white;
+    opacity: 0.5;
+    margin-bottom: 5vw;
+}
+#glimpses #glimpses-view{
+    padding: 0vw 5vw 5vw 5vw;
+    text-align: center;
+}
+#glimpses #glimpses-view .carousel-inner div{
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+#glimpses #glimpses-view .carousel-inner div img, #glimpses #glimpses-view .carousel-inner div video{
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0.5rem;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+#glimpses #glimpses-view #glimpse-not-found{
+    color: rgba(255, 255, 255, 0.493);
+    font-family: Poppins;
+    font-size: 2rem;
+    text-align: center;
+    height: 40vh;
+    width: 100%;
+}
+
+/* Live button link */
+div#gtl-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+button.go-to-live{
+    border: 0px;
+    border-radius: 0.3rem;
+    /* height: 3.5vw; */
+    color: rgba(51, 51, 51, 1);
+    background: #F7DE60;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    letter-spacing: 0.25vw;
+    padding: 1rem 2rem 1rem 2rem;
+}
