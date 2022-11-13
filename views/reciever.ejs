@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/fm/assets/img/favicon/favicon-16x16.png">
     <link rel="manifest" href="/fm/assets/img/favicon/site.webmanifest">
 
-    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdn.socket.io/4.5.0/socket.io.min.js" integrity="sha384-7EyYLQZgWBi67fBtVxw60/OWl1kjsfrPFcaU0pp0nAh+i8FD068QogUvg85Ewy1k" crossorigin="anonymous"></script> -->
     <script src="https://unpkg.com/peerjs@1.3.2/dist/peerjs.min.js"></script>
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -118,8 +118,9 @@
             }
         }
     </style>
+    <script src="/fm/socket.io/socket.io.js"></script>
     <script>
-        const socket = io();
+        const socket = io("http://localhost:3000",{path: "/fm/socket.io", forceNew: true});
         var peer = new Peer();
         
         document.addEventListener("DOMContentLoaded",

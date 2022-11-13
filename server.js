@@ -86,7 +86,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("static"));
 const httpServer = createServer(app);
 //const httpServer=https.createServer(options,app);
-const io = new Server(httpServer);
+const io = new Server(httpServer, {
+  path: "/fm/socket.io"
+});
 
 httpServer.listen(process.env.PORT || 3000, function(){
   console.log("90.8MHz FMCRS Website started running successfully!")
