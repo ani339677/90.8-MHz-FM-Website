@@ -286,7 +286,7 @@ app.get("/fm/login", function(req,res){
 let currLiveProg = [];
 let allPrograms = ["GURBANI","ASSI TE SAADA SAMAJ","SAADA CAMPUS","RU-BA-RU","EK MULAQAT","AFSANE PUNJABIYAAN DE","SEHAT SAMBHAL","CAREER AWARENESS"];
 
-app.post("/fm//go_live", function(req,res){
+app.post("/fm/go_live", function(req,res){
   var en = req.body.eventName;
   if(!currLiveProg.includes(en)){
     currLiveProg.push(en);
